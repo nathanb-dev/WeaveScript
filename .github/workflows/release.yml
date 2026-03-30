@@ -1,5 +1,7 @@
 name: Release File
-
+permissions: 
+  contents: write
+  
 on:
   push:
     tags:
@@ -34,5 +36,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update release file"
-            git push origin main
+            git push origin HEAD:main
           fi
