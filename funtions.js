@@ -38,7 +38,7 @@ export class Functions {
         toString: {min: 1, max: 1, fn: (args) => String(args[0])},
         toBoolean: {min: 1, max: 1, fn: (args) => this.utils.isTruthy(args[0])},
 
-        isNumber: {min: 1, max: 1, fn: (args) => typeof args[0] === "number"},
+        isNumber: {min: 1, max: 1, fn: (args) => typeof args[0] === "number" && !isNaN(args[0])},
         isString: {min: 1, max: 1, fn: (args) => typeof args[0] === "string"},
         isBoolean: {min: 1, max: 1, fn: (args) => typeof args[0] === "boolean"},
     });
